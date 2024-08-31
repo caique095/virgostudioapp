@@ -1,0 +1,148 @@
+/* Definição de variáveis globais */
+:root {
+    --white: #f8f9fa;
+    --black: #000000;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --transition-duration: 1s;
+}
+
+/* Importação das fontes Franie */
+@font-face {
+    font-family: 'Franie';
+    src: url('fonts/Franie-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Estilos globais */
+body {
+    background-color: var(--white);
+    color: var(--black);
+    font-family: 'Franie', sans-serif;
+    margin: 1rem;
+    padding-top: 3rem;
+}
+
+.title-banner {
+    font-size: 3rem;
+}
+
+.text-banner {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.btn-banner {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+}
+
+.btn-banner:hover {
+    background-color: var(--white);
+    color: red;
+}
+
+/* Navegação */
+.navbar {
+    background-color: var(--white);
+}
+
+.navbar-brand img {
+    height: 40px;
+}
+
+.navbar-brand,
+.nav-link {
+    color: var(--black) !important;
+}
+
+.nav-link:hover {
+    color: var(--success-color) !important;
+}
+
+/* Jumbotron */
+.jumbotron {
+    background-color: #007bff; /* Cor inicial para o jumbotron */
+    color: var(--white);
+    padding: 4rem 2rem;
+    border-radius: .5rem;
+    margin-bottom: 2rem;
+    transition: background-color var(--transition-duration) ease-in-out; /* Transição suave para a mudança de cor */
+}
+
+.jumbotron .display-4 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.jumbotron .lead {
+    font-size: 1.5rem;
+}
+
+.jumbotron .btn {
+    margin-top: 1rem;
+}
+
+/* Grid Layout "oi" */
+.oi {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    height: 20rem;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: background-color var(--transition-duration); /* Adiciona transição para a cor de fundo */
+}
+
+/* Imagens individuais para cada projeto */
+.oi-project1 {
+    background-image: url('./IMG/mat.png');
+}
+
+.oi-project2 {
+    background-image: url('./IMG/floki.png');
+}
+
+.oi-project3 {
+    background-image: url('./IMG/asap.png');
+}
+
+.oi-project4 {
+    background-image: url('./IMG/projeto4.png');
+}
+
+.oi-project5 {
+    background-image: url('./IMG/projeto5.png');
+}
+
+.oi-project6 {
+    background-image: url('./IMG/projeto6.png');
+}
+
+.oi-project7 {
+    background-image: url('./IMG/projeto7.png');
+}
+
+.oi-project8 {
+    background-image: url('./IMG/projeto8.png');
+}
+
+.oi-project9 {
+    background-image: url('./IMG/projeto9.png');
+}
+
+.oi:hover {
+    background-color: var(--success-color);
+}
