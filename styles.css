@@ -286,3 +286,50 @@ body {
 .offcanvas .btn-close {
     outline: none;
 }
+
+.teste1{
+    display: flex;
+    width: 100%;
+    margin: 2rem 0;
+
+}
+
+.esquerda{
+    background-color: red;
+    height: 20px;
+    width: 60%;
+    padding: 10rem;
+    border-radius: .5rem;
+    margin: 1rem;
+}
+
+.direita{
+    background-color: blue;
+    height: 20px;
+    width: 40%;
+    padding: 10rem;
+    border-radius: .5rem;
+}
+
+/* Estilos específicos para o formulário */
+form {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form .form-control {
+    border-radius: .25rem;
+    border: 1px solid var(--black);
+}
+
+form .btn-dark {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+form .btn-dark:hover {
+    background-color: var(--success-color);
+    color: var(--black);
+}
