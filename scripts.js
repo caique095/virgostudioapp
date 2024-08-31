@@ -1,3 +1,8 @@
+// Função para mudar a cor do título
+function changeTitleColor(color) {
+    document.getElementById('title').style.color = color;
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     // Array de cores para o jumbotron
     const colors = [

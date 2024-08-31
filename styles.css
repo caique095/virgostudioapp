@@ -1,3 +1,14 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
 /* Definição de variáveis globais */
 :root {
     --white: #f8f9fa;
@@ -16,12 +27,18 @@
 }
 
 /* Estilos globais */
+html{
+    height: 100%;
+}
+
 body {
     background-color: var(--white);
     color: var(--black);
     font-family: 'Franie', sans-serif;
     margin: 1rem;
     padding-top: 3rem;
+    line-height: 1.6;
+    height: 100%;
 }
 
 .title-banner {
@@ -30,7 +47,7 @@ body {
 
 .text-banner {
     font-size: 1.2rem;
-    margin: 1rem 0;
+    margin: 1rem 0 2rem 0;
 }
 
 .btn-banner {
@@ -66,12 +83,14 @@ body {
 
 /* Jumbotron */
 .jumbotron {
-    background-color: #007bff; /* Cor inicial para o jumbotron */
+    background-color: #007bff; /* Cor inicial de fallback */
     color: var(--white);
     padding: 4rem 2rem;
     border-radius: .5rem;
     margin-bottom: 2rem;
-    transition: background-color var(--transition-duration) ease-in-out; /* Transição suave para a mudança de cor */
+    background-size: cover;
+    background-position: center;
+    transition: background-image var(--transition-duration) ease-in-out; /* Transição suave para a mudança de imagem */
 }
 
 .jumbotron .display-4 {
@@ -101,6 +120,7 @@ body {
     text-align: center;
     transition: background-image 0.5s ease-in-out;
 }
+
 /* Imagens individuais para cada projeto */
 .oi-project1 {
     background-image: url('./IMG/mat.png');
@@ -178,4 +198,41 @@ body {
 
 .oi-project9:hover {
     background-image: url('./IMG/asap-hover.png'); /* Imagem de fundo ao passar o mouse */
+}
+
+.footer-insta, .footer-behance, .footer-zap{
+    color: var(--black);
+}
+
+/* Estilo para os botões de cor */
+.color-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.color-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.color-button:hover {
+    transform: scale(1.1);
+}
+
+/* Cores dos botões */
+.color-button:nth-child(1) {
+    background-color: #ff0000; /* Vermelho */
+}
+
+.color-button:nth-child(2) {
+    background-color: #ffff00; /* Amarelo */
+}
+
+.color-button:nth-child(3) {
+    background-color: #0000ff; /* Azul */
 }
