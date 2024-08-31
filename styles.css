@@ -79,10 +79,6 @@ body {
     font-weight: bold;
 }
 
-.jumbotron .lead {
-    font-size: 1.5rem;
-}
-
 .jumbotron .btn {
     margin-top: 1rem;
 }
@@ -103,9 +99,8 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    transition: background-color var(--transition-duration); /* Adiciona transição para a cor de fundo */
+    transition: background-image 0.5s ease-in-out;
 }
-
 /* Imagens individuais para cada projeto */
 .oi-project1 {
     background-image: url('./IMG/mat.png');
@@ -120,29 +115,67 @@ body {
 }
 
 .oi-project4 {
-    background-image: url('./IMG/projeto4.png');
+    background-image: url('./IMG/asap.png');
 }
 
 .oi-project5 {
-    background-image: url('./IMG/projeto5.png');
+    background-image: url('./IMG/floki.png');
 }
 
 .oi-project6 {
-    background-image: url('./IMG/projeto6.png');
+    background-image: url('./IMG/mat.png');
 }
 
 .oi-project7 {
-    background-image: url('./IMG/projeto7.png');
+    background-image: url('./IMG/mat.png');
 }
 
 .oi-project8 {
-    background-image: url('./IMG/projeto8.png');
+    background-image: url('./IMG/mat.png');
 }
 
 .oi-project9 {
-    background-image: url('./IMG/projeto9.png');
+    background-image: url('./IMG/asap.png');
 }
 
+/* Efeito hover para alterar a imagem de fundo */
 .oi:hover {
-    background-color: var(--success-color);
+    opacity: 0.8; /* Opacidade reduzida para efeito de destaque */
+}
+
+/* Exemplos para imagens hover, altere para suas imagens desejadas */
+.oi-project1:hover {
+    background-image: url('./IMG/mathias.png'); /* Imagem de fundo ao passar o mouse */
+}
+
+.oi-project2:hover {
+    background-image: url('./IMG/floki-hover.png'); /* Imagem de fundo ao passar o mouse */
+}
+
+.oi-project3:hover {
+    background-image: url('./IMG/asap-hover.png'); /* Imagem de fundo ao passar o mouse */
+}
+
+.oi-project4:hover {
+    background-image: url('./IMG/asap-hover.png'); /* Imagem de fundo ao passar o mouse */
+}
+
+.oi-project5:hover {
+    background-image: url('./IMG/floki-hover.png'); /* Imagem de fundo ao passar o mouse */
+}
+
+.oi-project6:hover {
+    background-image: url('./IMG/mat-hover.png'); /* Imagem de fundo ao passar o mouse */
+}
+
+.oi-project7:hover {
+    background-image: url('./IMG/mat-hover.png'); /* Imagem de fundo ao passar o mouse */
+}
+
+.oi-project8:hover {
+    background-image: url('./IMG/mat-hover.png'); /* Imagem de fundo ao passar o mouse */
+}
+
+.oi-project9:hover {
+    background-image: url('./IMG/asap-hover.png'); /* Imagem de fundo ao passar o mouse */
 }
