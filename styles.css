@@ -27,7 +27,7 @@ a {
 }
 
 /* Estilos globais */
-html{
+html {
     height: 100%;
 }
 
@@ -87,10 +87,10 @@ body {
     padding: 4rem 2rem;
     border-radius: .5rem;
     margin-bottom: 2rem;
-    background-size: cover; /* Faz a imagem cobrir toda a área */
-    background-position: center center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita repetição da imagem */
-    transition: background-image var(--transition-duration) ease-in-out; /* Transição suave para a mudança de imagem */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: background-image var(--transition-duration) ease-in-out;
 }
 
 .jumbotron .display-4 {
@@ -101,7 +101,6 @@ body {
 .jumbotron .btn {
     margin-top: 1rem;
 }
-
 
 /* Grid Layout "oi" */
 .oi {
@@ -119,7 +118,11 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    transition: background-image 0.5s ease-in-out;
+    transition: background-image 0.5s ease-in-out, opacity 0.3s ease;
+}
+
+.oi:hover {
+    opacity: 0.8;
 }
 
 /* Imagens individuais para cada projeto */
@@ -160,49 +163,52 @@ body {
 }
 
 /* Efeito hover para alterar a imagem de fundo */
-.oi:hover {
-    opacity: 0.8; /* Opacidade reduzida para efeito de destaque */
-}
-
-/* Exemplos para imagens hover, altere para suas imagens desejadas */
 .oi-project1:hover {
-    background-image: url('./IMG/mathias.png'); /* Imagem de fundo ao passar o mouse */
+    background-image: url('./IMG/mathias.png');
 }
 
 .oi-project2:hover {
-    background-image: url('./IMG/floki-hover.png'); /* Imagem de fundo ao passar o mouse */
+    background-image: url('./IMG/floki-hover.png');
 }
 
 .oi-project3:hover {
-    background-image: url('./IMG/asap-hover.png'); /* Imagem de fundo ao passar o mouse */
+    background-image: url('./IMG/asap-hover.png');
 }
 
 .oi-project4:hover {
-    background-image: url('./IMG/asap-hover.png'); /* Imagem de fundo ao passar o mouse */
+    background-image: url('./IMG/asap-hover.png');
 }
 
 .oi-project5:hover {
-    background-image: url('./IMG/floki-hover.png'); /* Imagem de fundo ao passar o mouse */
+    background-image: url('./IMG/floki-hover.png');
 }
 
 .oi-project6:hover {
-    background-image: url('./IMG/mat-hover.png'); /* Imagem de fundo ao passar o mouse */
+    background-image: url('./IMG/mat-hover.png');
 }
 
 .oi-project7:hover {
-    background-image: url('./IMG/mat-hover.png'); /* Imagem de fundo ao passar o mouse */
+    background-image: url('./IMG/mat-hover.png');
 }
 
 .oi-project8:hover {
-    background-image: url('./IMG/mat-hover.png'); /* Imagem de fundo ao passar o mouse */
+    background-image: url('./IMG/mat-hover.png');
 }
 
 .oi-project9:hover {
-    background-image: url('./IMG/asap-hover.png'); /* Imagem de fundo ao passar o mouse */
+    background-image: url('./IMG/asap-hover.png');
 }
 
-.footer-insta, .footer-behance, .footer-zap{
+.footer {
+    margin-top: 2rem;
+    display: flex;
+}
+
+.bi {
     color: var(--black);
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 /* Estilo para os botões de cor */
@@ -227,13 +233,56 @@ body {
 
 /* Cores dos botões */
 .color-button:nth-child(1) {
-    background-color: #ff0000; /* Vermelho */
+    background-color: #ff0000;
 }
 
 .color-button:nth-child(2) {
-    background-color: #ffff00; /* Amarelo */
+    background-color: #ffff00;
 }
 
 .color-button:nth-child(3) {
-    background-color: #0000ff; /* Azul */
+    background-color: #0000ff;
+}
+
+/* Menu Hamburger */
+.navbar-toggler {
+    border: none;
+    background: none;
+    outline: none;
+    position: relative;
+}
+
+.navbar-toggler .bar {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--black);
+    margin: 6px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler.open .bar:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 9px;
+}
+
+.navbar-toggler.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggler.open .bar:nth-child(3) {
+    transform: rotate(45deg);
+    top: -9px;
+}
+
+.offcanvas {
+    transition: transform 0.3s ease-in-out;
+}
+
+.offcanvas.show {
+    transform: translateX(0);
+}
+
+.offcanvas .btn-close {
+    outline: none;
 }

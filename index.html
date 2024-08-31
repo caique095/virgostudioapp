@@ -8,7 +8,7 @@
     <meta name="keywords" content="design, identidade visual, Bootstrap, web design, branding">
     <meta name="author" content="Seu Nome">
     <title>Virgo Studio Criativo</title>
-    
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
@@ -17,23 +17,40 @@
 
     <!-- Bootstrap Icons CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 </head>
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <!-- Logo no lado esquerdo -->
             <a class="navbar-brand" href="#"><img src="./IMG/logo.png" alt="Virgo Studio" class="img-fluid" style="height: 40px;"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </button>
-            <!-- Links no lado direito -->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Início</a>
-                    <a class="nav-link" href="#">Sobre</a>
-                    <a class="nav-link" href="#">Contato</a>
+            <!-- Offcanvas Menu -->
+            <div class="offcanvas offcanvas-end" id="offcanvasNavbar" tabindex="-1" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 id="offcanvasNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="paginasobre.html">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="paginacontato.html">Contato</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -41,9 +58,9 @@
 
     <!-- Jumbotron -->
     <div class="jumbotron text-center mt-3" id="jumbotron">
-        <h1 class="title-banner display-4" id="title">Virgo Studio</h1>
+        <h1 class="title-banner display-4">Virgo Studio</h1>
         <p class="text-banner">Design fala quando palavras não são suficientes.</p>
-        <a href="#como-trabalhamos" class="btn-banner">Como trabalhamos?</a>
+        <a href="#como-trabalhamos" class="btn btn-dark btn-banner">Como trabalhamos?</a>
     </div>
 
     <!-- Botões para mudar a cor do título -->
@@ -52,51 +69,64 @@
         <button class="color-button" data-color="#ffff00"></button>
         <button class="color-button" data-color="#0000ff"></button>
     </div>
-    
+
     <!-- Grid Layout for "oi" Items -->
     <section class="container mt-5">
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col d-flex justify-content-center">
-                <a href="pagina1.html" class="oi oi-project1"></a>
+                <a href="pagina1.html" class="oi oi-project1" data-aos="fade-up"></a>
             </div>
             <div class="col d-flex justify-content-center">
-                <a href="pagina2.html" class="oi oi-project2"></a>
+                <a href="pagina2.html" class="oi oi-project2" data-aos="fade-up"></a>
             </div>
             <div class="col d-flex justify-content-center">
-                <a href="pagina3.html" class="oi oi-project3"></a>
+                <a href="pagina3.html" class="oi oi-project3" data-aos="fade-up"></a>
             </div>
             <div class="col d-flex justify-content-center">
-                <a href="pagina4.html" class="oi oi-project4"></a>
+                <a href="pagina4.html" class="oi oi-project4" data-aos="fade-up"></a>
             </div>
             <div class="col d-flex justify-content-center">
-                <a href="pagina5.html" class="oi oi-project5"></a>
+                <a href="pagina5.html" class="oi oi-project5" data-aos="fade-up"></a>
             </div>
             <div class="col d-flex justify-content-center">
-                <a href="pagina6.html" class="oi oi-project6"></a>
+                <a href="pagina6.html" class="oi oi-project6" data-aos="fade-up"></a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="text-center text-md-start py-3">
+    <footer class="footer text-center text-md-start py-3">
         <div class="container">
-            <div class="footer d-flex justify-content-between align-items-center">
+            <div class="row justify-content-between align-items-center">
                 <!-- Logo -->
-                <div class="footer-logo">
-                    <a href="#" aria-label="Página inicial"><img src="./IMG/logo.png" alt="Logo da empresa" class="img-fluid" style="height: 40px;"></a>
+                <div class="col-md-4">
+                    <a href="#" aria-label="Página inicial">
+                        <img src="./IMG/logo.png" alt="Logo da empresa" class="img-fluid" style="height: 40px;">
+                    </a>
                 </div>
-                <!-- Links -->
-                <div class="footer-links">
-                    <a class="footer-insta" href="https://instagram.com/virgostudiocriativo" aria-label="Instagram da empresa">Instagram</a>
-                    <a class="footer-behance" href="https://www.behance.net" aria-label="Perfil da empresa no Behance">Behance</a>
-                    <a class="footer-zap" href="https://wa.me/PHONE_NUMBER" aria-label="WhatsApp da empresa">WhatsApp</a>
+                <!-- Links com ícones -->
+                <div class="col-md-4 text-md-end">
+                    <a href="https://www.behance.net" class="text-white mx-2" aria-label="Perfil da empresa no Behance">
+                        <i class="bi bi-behance"></i>
+                    </a>
+                    <a href="https://instagram.com/virgostudiocriativo" class="text-white mx-2" aria-label="Instagram da empresa">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/PHONE_NUMBER" class="text-white mx-2" aria-label="WhatsApp da empresa">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS + Custom JS -->
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
     <script src="script.js"></script>
 </body>
 </html>
